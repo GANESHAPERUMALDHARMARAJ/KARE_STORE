@@ -1,0 +1,9 @@
+{% extends 'base.html' %}
+{% block content %}
+<table border="1">
+<tr><th>Item</th><th>Qty</th></tr>
+{% for r in stock %}
+<tr><td>{{ r.Item }}</td><td>{{ r['Available Quantity'] }}</td></tr>
+{% endfor %}
+</table>
+{% endblock %}

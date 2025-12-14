@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+Item: <input name="item">
+Qty: <input type="number" name="quantity">
+Issued To: <input name="issued_to">
+<button>Issue</button>
+</form>
+<ul>
+{% for r in records %}
+<li>{{ r.Item }} | {{ r.Quantity }} | {{ r['Total Cost'] }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

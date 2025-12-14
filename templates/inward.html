@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="post">
+Item: <input name="item">
+Qty: <input type="number" name="quantity">
+Cost: <input type="number" step="0.01" name="cost">
+Supplier: <input name="supplier">
+<button>Add</button>
+</form>
+<ul>
+{% for r in records %}
+<li>{{ r.Item }} | {{ r.Balance }}</li>
+{% endfor %}
+</ul>
+{% endblock %}
